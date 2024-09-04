@@ -5,6 +5,7 @@ import {
 } from "@phosphor-icons/react";
 
 function Footer() {
+  
   let data = new Date().getFullYear();
 
   return (
