@@ -51,33 +51,34 @@ function DeletarCategoria() {
         Você tem certeza que deseja apagar a categoria a seguir?
       </p>
       <div className="border flex flex-col rounded-2xl overflow-hidden justify-between">
-        <header className="py-2 px-6 bg-indigo-600 text-cyberpunk-text font-bold text-2xl">
+        <header className="py-2 px-6 bg-[#212121] text-cyberpunk-text font-bold text-2xl">
           Categoria
         </header>
         <p className="p-8 text-3xl bg-slate-200 h-full">{categoria.nome}</p>
         <div className="flex">
           <button
-            className="text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2"
+            className="text-slate-100 bg-red-500 hover:bg-red-600 w-full py-2 transition-all duration-300"
             onClick={retornar}
           >
             Não
           </button>
           <button
-            className="w-full text-slate-100 bg-indigo-400 hover:bg-indigo-600 flex items-center justify-center"
+            className="w-full text-slate-100 bg-green-950 hover:bg-green-800 flex items-center justify-center transition-all duration-300"
             onClick={deletarCategoria}
           >
-            {isLoading ? ( (
-            <Circles
-              height="25"
-              width="80"
-              color="black"
-              ariaLabel="circles-loading"
-              wrapperStyle={{}}
-              wrapperClass=""
-              visible={true}
-            />
-            ) ) : <span>Sim</span>
-          }
+            {isLoading ? (
+              <Circles
+                height="25"
+                width="80"
+                color="black"
+                ariaLabel="circles-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+              />
+            ) : (
+              <span>Sim</span>
+            )}
           </button>
         </div>
       </div>
